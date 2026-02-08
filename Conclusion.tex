@@ -1,0 +1,47 @@
+%\input{preamble.tex}
+%\begin{document}
+
+\chapter{Conclusion and Future Work}\label{chap6_Conclution}
+
+\section{Conclusion}
+\label{chap6_sec_conclusion}
+
+In this thesis, we have addressed the fundamental challenges of resource efficiency in integrated sensing and communication (ISAC) systems caused by the scarcity of multi-dimensional radio resources. We have investigated four distinct resource-efficient designs spanning the time, frequency, spatial, and functional domains. These schemes aim to break the resource bottlenecks such as temporal rigidity, spectral saturation, spatial inequality, and functional isolation. We have formulated joint optimization problems involving beamforming, scheduling, and multi-dimensional resource allocation to coordinate the conflicting requirements of sensing and communication. Through rigorous mathematical modeling and algorithmic design, we have achieved superior system performance in terms of energy efficiency, sensing efficiency, fairness, and sustainability.
+
+In Chapter \ref{chap2_twc1}, we have proposed an energy-efficient sensing scheduling scheme using channel-sharing mechanisms to address the temporal rigidity in ISAC systems. The scheme allows the ISAC base station to dynamically schedule sensing tasks over the downlink channels of conventional cellular users. We have formulated a joint optimization problem of multi-target sensing scheduling and transceiver beamforming to maximize the energy efficiency of radar sensing while guaranteeing the communication throughput. To solve the non-convex problem, we have developed an efficient algorithm based on Dinkelbach's method, semidefinite relaxation (SDR), and a swap-matching mechanism.
+
+In Chapter \ref{chap3_tvt}, to tackle the spectral capacity limit, we have proposed a sensing-efficient NOMA-aided ISAC framework. We have introduced a novel metric, i.e., sensing efficiency, to measure the number of successfully sensed targets per time unit. We have formulated a joint optimization problem of beamforming, NOMA transmission duration, and sensing scheduling to maximize this efficiency while satisfying the quality of service for both NOMA users and sensing targets. We have designed a decomposition-based algorithm that utilizes successive convex approximation (SCA) and penalty function methods for beamforming, a bisection search approach for optimal time duration, and a cross-entropy learning-based algorithm for optimal scheduling.
+
+In Chapter \ref{chap4_iotj}, we have addressed the spatial coverage limitations and resource unfairness by proposing a fairness-aware multi-device cooperative sensing scheme. Devices perform cooperative sensing and data transmission in a time-division manner to eliminate interference. We have formulated a joint optimization problem of time allocation and beamforming to maximize the fairness-aware system-wise throughput while guaranteeing multi-target sensing quality. We have derived a semi-analytical expression for the optimal time allocation and developed an efficient block coordinate descent (BCD)-based algorithm to solve the joint optimization problem.
+
+In Chapter \ref{chap5_twc2}, we have investigated the integration of sensing, communication, and computing to address functional isolation. We have proposed a NOMA-assisted integrated sensing and two-tier task offloading (ISTTO) framework, where an access point supports edge task processing while performing continuous sensing, with additional offloading capabilities to cloudlet servers. We have addressed the complex inter-functionality interference and the trade-off between sensing accuracy and offloading latency. We have formulated a joint optimization problem of transmit beamforming, dedicated sensing signals, offloading strategies, and associated allocations of the communication and computing resources to minimize the total energy consumption, and designed a decomposition-based algorithm to obtain the optimal solution.
+
+
+\section{Future Work}
+The research presented in this thesis has established a systematic framework for resource-efficient ISAC, primarily focusing on ground-based networks. However, the rapid growth of the     low-altitude economy presents a new area characterized by complex environments and dynamic missions. To address the practical challenges of unclear sensing, unreliable control, and difficult collaboration in low-altitude scenarios, future work will focus on multi-modal cooperative sensing, embodied ISAC, and cognitive swarm intelligence.
+
+\subsection{Robust Multi-Modal Cooperative Sensing for Low-Altitude Environments}
+
+As highlighted in the research background, low-altitude sensing faces three main challenges: unclear sensing due to bad weather (rain, fog, low light), inaccurate detection caused by high-speed flight, and incomplete observation due to limited view angles and blocking objects. To overcome these environmental and physical limitations, it is essential to move beyond single-node, single-modal sensing. We propose a comprehensive approach that integrates heterogeneous sensors and multi-view cooperation to achieve robust perception, focusing on the following two aspects:
+\begin{itemize}
+    \item All-Weather Multi-Sensor Fusion: Future work will extend the single-modal ISAC framework to multi-modal ISAC, combining radio frequency sensing with vision. We aim to use the advantage of radio frequency signals to penetrate rain and fog, making up for the performance loss of optical sensors in harsh environments. A cooperative learning framework will be developed to mix data from different sensors, ensuring clear perception under all weather conditions.
+    \item Multi-View Cooperative Reconstruction: To address the incomplete sensing problem caused by blocking objects, we will explore multi-view cooperative sensing. By coordinating multiple UAVs to observe a target from different angles, we can build a complete 3D map of the environment. This direction involves optimizing the 3D formation of UAVs to capture the most spatial information, thereby solving the blind spot issue found in single-view perception.
+\end{itemize}
+
+\subsection{Embodied ISAC: From Sensing to Reliable Action}
+
+In complex low-altitude environments, current UAV systems suffer from unreliable target understanding, imprecise action generation, and uncontrollable safety risks. To mitigate these risks and bridge the gap between perception and actuation, future work will transition from open-loop sensing to closed-loop embodied ISAC. This paradigm shift requires joint optimization of information acquisition and physical control, with specific research directions outlined as follows:
+\begin{itemize}
+    \item Sensing-Control Closed-Loop Optimization: Unlike traditional ISAC which treats sensing as an output, embodied ISAC treats sensing as an input for control. Future work will investigate the joint optimization of ISAC waveforms and flight control policies. The goal is to minimize the action generation error by directly mapping sensing data to precise mechanical operations (e.g., grasping or landing), improving the working efficiency of aerial manipulation.
+    \item Safety-Aware Autonomous Decision Making: To address the uncontrollable safety risks (e.g., collisions), we will develop explainable end-to-end ISAC strategies. By integrating real-time environmental sensing with reliable control theory, the system can autonomously respond to sudden obstacles and ensure safe paths. This research aims to guarantee system-level reliability and safety for autonomous low-altitude flight.
+\end{itemize}
+
+\subsection{Cognitive Swarm Intelligence: Collaborative Reasoning and Evolution}
+
+Low-altitude swarm intelligence currently faces the challenges of data scarcity, poor autonomy, and difficult collaboration. Furthermore, the complexity of tasks requires UAVs to perform cross-level reasoning in environments with little semantic information. Establishing a robust swarm intelligence system in such resource-constrained environments requires a fundamental shift in how knowledge is acquired and processed. We identify two key research pathways to enhance the autonomy and cognitive capabilities of UAV swarms:
+\begin{itemize}
+    \item Collaborative Learning for Swarm Evolution: To tackle the data scarcity and poor autonomy issues, future work will propose a distributed collaborative learning framework. By enabling UAVs to share model updates rather than raw data, the swarm can collectively improve its sensing models and adapt to new environments without relying heavily on pre-labeled training data.
+    \item Semantic-Aware Reasoning and Decision: Addressing the spatial complexity and task complexity, we will explore semantic ISAC. This involves moving beyond signal-level processing to semantic-level understanding. We aim to equip UAV swarms with the ability to perform logical reasoning across sensing-reasoning-decision chains, enabling them to understand complex instructions and execute diverse missions with high autonomy.
+\end{itemize}
+
+
