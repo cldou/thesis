@@ -1,0 +1,71 @@
+\documentclass[12pt,twoside,a4paper]{book}
+\input{preamble.tex}
+\renewcommand\listtablename{\centerline{List of Tables and Figures}}
+\raggedbottom
+\begin{document}
+
+\input frontpages.tex
+\input Acknowledgement.tex
+\newpage
+\input Abstract.tex
+\newpage
+\begin{center}
+{\textbf{Declaration}}
+\end{center}
+\addcontentsline{toc}{chapter}{Declaration}
+I declare that the thesis here submitted is original except for the source materials explicitly acknowledged and that this thesis as a whole, or any part of this thesis has not been previously submitted for the same degree or for a different degree.
+\\
+\\
+I also acknowledge that I have read and understood the Rules on Handling Student Academic Dishonesty and the Regulations of the Student Discipline of the University of Macau.
+\vspace{3cm}
+\newpage
+
+\renewcommand\contentsname{\small Table of Contents}
+\renewcommand{\contentsname}{\centerline{Table of Contents}}
+\tableofcontents \thispagestyle{plain}
+\cleardoublepage
+
+\newpage
+\addcontentsline{toc}{chapter}{List of Tables and Figures}
+\renewcommand{\numberline}[1]{\hspace*{-1em}\lotlabel~#1\hspace*{0.5em}}
+\listoftables
+
+%\addcontentsline{toc}{chapter}{List of Figures}
+\renewcommand{\numberline}[1]{\hspace*{-1em}\loflabel~#1\hspace*{0.5em}}
+%\listoffigures
+\makeatletter
+\@starttoc{lof}
+\makeatother
+
+
+
+%% No blank page is allowed between list of figures/tables and content. Hence, I need to add one page to make the 1st page of content be the odd page.
+%% If the 1st page of the content is odd number, then you can delete List of Abbreviations page.
+\newpage
+\input Abbreviations.tex
+
+
+\newpage
+%\thispagestyle{empty} \mbox{}
+%\setcounter{page}{1}
+\pagenumbering{arabic}
+
+
+\input Introduction.tex
+\input tex_twc1.tex
+\input tex_tvt.tex
+\input tex_iotj.tex
+\input tex_twc2.tex
+\input Conclusion.tex
+\newpage
+\renewcommand{\baselinestretch}{1}\selectfont
+\renewcommand\bibname{References}
+\cleardoublepage
+
+
+
+\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{IEEEtran}
+\bibliography{thesis}
+
+\end{document}
